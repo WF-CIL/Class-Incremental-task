@@ -21,7 +21,7 @@ class ChannelAttention1D(nn.Module):
 
     def forward(self, x):
         avg_out = self.fc2(self.relu1(self.fc1(self.avg_pool(x))))
-        out = avg_out  # 在1D情况下，通常不使用max pooling
+        out = avg_out  
         return self.sigmoid(out)
 
 
